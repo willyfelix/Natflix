@@ -12,12 +12,17 @@
       data.append("email", email);
       data.append("senha", senha);
         
-      await fetch(ENDPOINT_CADASTRAR_USUARIO, {
+      const response = await fetch(ENDPOINT_CADASTRAR_USUARIO, {
             method: "POST",
             body: data,
             credentials: "include",
         });
-        $page = "listar-usuarios";
+        if (!response.ok) {
+            alert("Algo está errado, revise seus dados ou tente novamente mais tarde!");
+            return;
+        }
+        alert("Usuário Cadastrado com Sucesso!")
+        $page = "login";
     }
 </script>
 

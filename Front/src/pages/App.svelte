@@ -10,6 +10,7 @@
   import ListarUsuarios from "./usuario/Listar.svelte";
   import CadastrarUsuario from "./usuario/Cadastrar.svelte";
   import AtualizarUsuario from "./usuario/Atualizar.svelte";
+  import Login from "./Login.svelte";
 
 
 </script>
@@ -20,7 +21,9 @@
 
   <Navbar />
 
-  {#if $page === "listar-filmes"}
+  {#if $page === "login"}
+    <Login />
+  {:else if $page === "listar-filmes"}
     <ListarFilmes />
   {:else if $page === "cadastrar-filme"}
     <CadastrarFilme />

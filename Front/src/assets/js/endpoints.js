@@ -1,5 +1,7 @@
 const URL = "http://localhost:8001";
 
+export const ENDPOINT_LOGIN = URL + "/login.php";
+export const ENDPOINT_LOGADO = URL + "/logout.php";
 
 export const ENDPOINT_CADASTRAR_USUARIO = URL + "/usuario/cadastrar.php";
 export const ENDPOINT_LISTAR_USUARIOS = URL + "/usuario/listar.php";

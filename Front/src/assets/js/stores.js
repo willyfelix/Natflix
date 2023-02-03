@@ -1,5 +1,6 @@
 import { writable } from "svelte/store";
 
+export const logado = writable(false);
 export const page = writable("listar-usuarios");
 export const usuarios = writable([]);
 export const usuarioAtual = writable();
