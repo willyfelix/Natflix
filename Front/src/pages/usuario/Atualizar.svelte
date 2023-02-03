@@ -20,6 +20,7 @@
             body: data,
             credentials: "include",
         });
+        alert("Usuário Atualizado com Sucesso!")
         $page = "listar-usuarios";
     }
 </script>

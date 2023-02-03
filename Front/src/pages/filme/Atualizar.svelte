@@ -22,6 +22,7 @@
             body: data,
             credentials: "include",
         });
+        alert("Filme atualizado com Sucesso!")
         $page = "listar-filmes";
     }
 </script>

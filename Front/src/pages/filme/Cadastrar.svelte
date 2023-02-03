@@ -19,6 +19,7 @@
             body: data,
             credentials: "include",
         });
+        alert("Filme Cadastrado com Sucesso!")
         $page = "listar-filmes";
     }
 </script>

@@ -59,8 +59,8 @@
             
             <div class="d-flex align-items-center justify-content-between">
 
-                <button class="btn btn-success btn-block mr-2" type="submit">Entrar</button>
-                <button class="btn btn-info" on:click={() => changePage('cadastrar-usuario')}>Cadastrar</button>
+                <button class="btn btn-light btn-block mr-2" type="submit">Entrar</button>
+                <button class="btn btn-secondary" on:click={() => changePage('cadastrar-usuario')}>Cadastrar</button>
            
             </div>
 
