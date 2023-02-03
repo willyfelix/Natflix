@@ -1,0 +1,17 @@
+
+.navbar {
+    border-radius: 5px;
+}
+
+#logo {
+    margin-left: 1em;
+}
+
+#subtitulo {
+    color: #018037;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+    margin-left: 1em;
+}
