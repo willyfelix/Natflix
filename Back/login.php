@@ -4,9 +4,8 @@
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $stmt = $conn->prepare('SELECT * FROM usuarios WHERE email_user = :email AND senha_user = :pw');
+    $stmt = $conn->prepare('SELECT * FROM usuarios WHERE email = :email AND senha = :pw');
     $stmt->execute([ 'email' => $email, 'pw' => $password]);
-
     $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     if (sizeof($data) == 0) {

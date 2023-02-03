@@ -14,5 +14,7 @@ CREATE TABLE filmes (
     titulo VARCHAR(255) NOT NULL,
     diretor VARCHAR(255) NOT NULL,
     genero VARCHAR(60) NOT NULL,
-    anoDeLancamento VARCHAR(60) NOT NULL
+    anoDeLancamento VARCHAR(60) NOT NULL,
+    usuario_id int(11) NOT NULL,
+    CONSTRAINT filmes_usuarios_fk FOREIGN KEY (usuario_id) REFERENCES usuarios (id)
 );

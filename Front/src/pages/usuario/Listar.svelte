@@ -47,14 +47,6 @@
 <div class="container mt-2">
   <div class="card mb-2">
     
-    <div class="row">
-      <div class="col-sm-12">
-        <button class="btn btn-success width" on:click={() => changePage('cadastrar-usuario')}>
-          Cadastrar novo usuario
-        </button>
-      </div>
-    </div>
-    
     <div class="row text-center mt-5">
       <div class="col-sm-12">
         <table class="table table-hover table-striped table-light">
@@ -63,7 +55,6 @@
               <th>#</th>
               <th>Nome </th>
               <th>Email</th>
-              <th>Senha</th>
               <th>Ações</th>
             </tr>
           </thead>
@@ -73,7 +64,6 @@
                 <td>{i+1}</td>
                 <td>{usuario.nome}</td>
                 <td>{usuario.email}</td>
-                <td>{usuario.senha}</td>
                 <td>
                   <button class="btn btn-small btn-sucess" on:click={() => mudarPagina(usuario)}> &#9998;</button>
                   <button class="btn btn-small btn-danger" on:click={() => deleteUsuario(usuario.id)}>&times;</button>

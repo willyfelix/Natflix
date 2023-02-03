@@ -21,7 +21,7 @@
             return;
         }
         $logado = true;
-        $page = "usuarios";
+        $page = "listar-filmes";
         $usuarios = await response.json();
     }
 
@@ -29,23 +29,29 @@
 	const mostrarSenha = () => {
         const senha = document.querySelector('#inputPassword');
         
-		if (senha.type === 'password') {
-			senha.type = 'text'
+		if (senha['type'] === 'password') {
+			senha['type'] = 'text'
 
         } else {
-			senha.type = 'password'
+			senha['type'] = 'password'
 		}
 	}
 </script>
 
 <div class="container">
     <div class="card">
-        <img id="profile-img" class="profile-img-card my-5" alt="logo" src="/images/logo.png" />
+        <img id="profile-img" class="profile-img-card my-5" alt="logo" src="/Natflix.png" />
 
         <form class="form-signin" on:submit|preventDefault={logar}>
             <span id="reauth-email" class="reauth-email"></span>
-            <input type="text" id="inputEmail" class="form-control" bind:value={email} placeholder="Email" required>
-            <input type="password" id="inputPassword" class="form-control" bind:value={password} placeholder="Senha" required>
+            <div class="principal">
+                Email:
+                <input type="text" id="inputEmail" class="form-control" bind:value={email} placeholder="Email" required>
+            </div>
+            <div class="principal">
+                Senha:
+                <input type="password" id="inputPassword" class="form-control" bind:value={password} placeholder="Senha" required>
+            </div>
             <div class="d-flex align-items-center mb-3">
                 <input class="boxpasswordhide" type="checkbox" style="width: 15px" on:click={mostrarSenha}> 
                 <span class="btn">Mostrar senha</span>
@@ -54,15 +60,11 @@
             <div class="d-flex align-items-center justify-content-between">
 
                 <button class="btn btn-success btn-block mr-2" type="submit">Entrar</button>
-                <button class="btn btn-info" on:click={() => changePage('register')}>Cadastrar</button>
+                <button class="btn btn-info" on:click={() => changePage('cadastrar-usuario')}>Cadastrar</button>
            
             </div>
 
         </form><!-- /form -->
-
-        <div>
-            <button class="btn btn-link" on:click={() => changePage('recuperar-senha')}>Esqueceu a senha?</button>
-        </div>
 
     </div><!-- /card-container -->
 </div>

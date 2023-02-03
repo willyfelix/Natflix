@@ -35,19 +35,28 @@
         <form class="form-signin" on:submit|preventDefault={cadastrar}>
             <div class="row mb-2">
                 <div class="col-sm-12">
-                    <input type="text" class="form-control" bind:value={nome} placeholder="Nome" required pattern="([a-zA-ZÀ-ú ]+)" >
+                    <div class="principal">
+                        Nome:
+                        <input type="text" class="form-control" bind:value={nome} placeholder="Nome" required pattern="([a-zA-ZÀ-ú ]+)" >
+                    </div>
                 </div>
             </div>
 
             <div class="row mb-2">
               <div class="col-sm-12">
-                <input type="email" class="form-control" bind:value={email} placeholder="Email" required>
+                <div class="principal">
+                    Email:
+                    <input type="email" class="form-control" bind:value={email} placeholder="Email" required>
+                </div>
               </div>
             </div>
 
             <div class="row mb-2">
               <div class="col-sm-12">
-                <input type="password" class="form-control" bind:value={senha} placeholder="Senha" required>
+                <div class="principal">
+                    Senha:
+                    <input type="password" class="form-control" bind:value={senha} placeholder="Senha" required>
+                </div>
               </div>
             </div>
 
@@ -56,7 +65,7 @@
                     <button class="btn btn-success btn-block mt-2" type="submit">Cadastrar</button>
                 </div>
                 <div class="col-md-12">
-                    <button class="btn btn-secondary btn-block mt-2" on:click={() => changePage('listar-usuarios')}>Voltar</button>
+                    <button class="btn btn-secondary btn-block mt-2" on:click={() => changePage('login')}>Voltar</button>
                 </div>
             </div>
         </form>

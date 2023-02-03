@@ -1,21 +1,19 @@
 <?php
     require '../main.php';
 
-    // Passo 1: Pegar informações do front;
+    if (!isset($_SESSION['user'])) {
+        http_response_code(401);
+        exit();
+    }
    
     $titulo = $_POST['titulo'];
     $diretor = $_POST['diretor'];
     $genero = $_POST['genero'];
     $anoDeLancamento = $_POST['anoDeLancamento'];
+    $usuarioId = $_SESSION['user']['id'];
 
-
-
-    // Passo 2: Inserir as informações no BD;
-
-    $stmt = $conn->prepare('INSERT INTO filmes(titulo, diretor, genero, anoDeLancamento) VALUES (?, ?, ?, ?)');
-    $stmt->execute([$titulo, $diretor, $genero, $anoDeLancamento ]);
-
-    // Passo 3: Retornar ok!
+    $stmt = $conn->prepare('INSERT INTO filmes(titulo, diretor, genero, anoDeLancamento, usuario_id) VALUES (?, ?, ?, ?, ?)');
+    $stmt->execute([$titulo, $diretor, $genero, $anoDeLancamento, $usuarioId ]);
 
     http_response_code(201);
 ?>
