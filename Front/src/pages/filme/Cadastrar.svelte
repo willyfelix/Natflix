@@ -32,25 +32,37 @@
         <form class="form-signin" on:submit|preventDefault={cadastrar}>
             <div class="row mb-2">
                 <div class="col-sm-12">
+                  <div class="principal">
+                    Título:
                     <input type="text" class="form-control" bind:value={titulo} placeholder="Titulo do Filme" required pattern="([a-zA-ZÀ-ú ]+)" >
+                  </div>
                 </div>
             </div>
 
             <div class="row mb-2">
               <div class="col-sm-12">
-                <input type="text" class="form-control" bind:value={diretor} placeholder="Diretor" required>
+                <div class="principal">
+                  Diretor:
+                  <input type="text" class="form-control" bind:value={diretor} placeholder="Diretor" required>
+                </div>
               </div>
             </div>
 
             <div class="row mb-2">
               <div class="col-sm-12">
-                <input type="text" class="form-control" bind:value={genero} placeholder="Genero" required>
+                <div class="principal">
+                  Gênero:
+                  <input type="text" class="form-control" bind:value={genero} placeholder="Genero" required>
+                </div>
               </div>
             </div>
 
             <div class="row mb-2">
               <div class="col-sm-12">
-                <input type="text" class="form-control" bind:value={anoDeLancamento} placeholder="Ano de Lancamento" required>
+                <div class="principal">
+                  Ano de Lançamento:
+                  <input type="text" class="form-control" bind:value={anoDeLancamento} placeholder="Ano de Lancamento" required>
+                </div>
               </div>
             </div>
 

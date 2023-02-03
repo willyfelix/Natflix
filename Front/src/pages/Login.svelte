@@ -1,7 +1,7 @@
 <link rel="stylesheet" type="text/css" href="/stylesheets/login.css"/>
 
 <script>
-    import { page, logado, changePage, usuarios } from '../assets/js/stores';
+    import { page, logado, changePage, usuario} from '../assets/js/stores';
     import { ENDPOINT_LOGIN } from '../assets/js/endpoints';
 
     let email, password;
@@ -22,7 +22,7 @@
         }
         $logado = true;
         $page = "listar-filmes";
-        $usuarios = await response.json();
+        $usuario = await response.json();
     }
 
     
